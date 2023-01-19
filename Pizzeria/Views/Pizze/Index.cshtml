@@ -1,0 +1,69 @@
+﻿@model IEnumerable<Pizzeria.Models.Pizze>
+
+@{
+    ViewBag.Title = "Index";
+}
+
+<h2 class="text-center" style="font-size:5em; font-weight:800">Menù</h2>
+
+
+
+@*<table class="table">*@
+@*<tr>
+        <th>
+            @Html.DisplayNameFor(model => model.Nome)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.UrlImg)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.Prezzo)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.Descrizione)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.TempoPreparazione)
+        </th>
+        <th></th>
+    </tr>*@
+
+@foreach (var item in Model)
+{
+    <div class="row">
+        <div class="col-xs-4 text-center">
+            <img src="~/Content/FileUpload/@item.UrlImg" alt="Immagine pizza" class="img-rounded" />
+
+            <p class="" style="font-size:larger; font-weight:800">@Html.DisplayFor(modelItem => item.Nome) <span>@Html.DisplayFor(modelItem => item.Prezzo) </span></p>
+            <p> @Html.DisplayFor(modelItem => item.Descrizione)</p>
+        </div>
+    </div>
+}
+@*<p>
+    @Html.ActionLink("Create New", "Create")
+</p>*@
+
+        @*<tr>
+        <td>
+            @Html.DisplayFor(modelItem => item.Nome)
+        </td>
+        <td>
+            <img src="~/Content/FileUpload/@item.UrlImg" alt="Immagine pizza" style="width:10em" />
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.Prezzo)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.Descrizione)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.TempoPreparazione)
+        </td>
+        <td>
+            @Html.ActionLink("Aggiungi all'ordine", "Edit", new { id = item.IdPizza })
+        </td>
+    </tr>*@
+
+
+
+        @*</table>*@

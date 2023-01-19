@@ -1,0 +1,22 @@
+﻿@{
+    ViewBag.Title = "Home Page";
+}
+
+<div class="container  text-center">
+
+    <h2>Benvenuto alla :</h2>
+
+<div class="jumbotron ">
+    <h1>Pizzeria <br /> IN FORNO</h1>
+    <p class="lead">Vai al MENU!</p>
+    <button class="btn btn-default">
+        @Html.ActionLink("Menu", "Index", "Pizze")
+    </button>
+</div>
+    <br />
+<div class="row text-center">
+    <div style="float:left">@Html.ActionLink("Accedi", "Login", "Utenti")</div>
+    <div style="float:right"> @Html.ActionLink("Registrati", "Create", "Utenti")</div>
+</div>
+
+</div>
